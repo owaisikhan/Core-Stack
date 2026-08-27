@@ -25,9 +25,8 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="main_container">
-        <div className="footer_inner">
+        <div className="main_container">
+          <div className="footer_inner">
           <div className="footer_block">
             <div className="foot_col logo">
               <div className="footer_logo">
@@ -132,6 +131,7 @@ export function Footer() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <div className="footer_bottom">

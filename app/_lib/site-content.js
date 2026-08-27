@@ -294,31 +294,31 @@ export const siteContent = {
           {
             "title": "Retail",
             "body": "Manage stores, inventory, and online sales in one connected system.",
-            "img": "baseer_food_76fc911f07.jpg",
+            "img": "baseer_retail_8ef4e34d3f.jpg",
             "link": true
           },
           {
             "title": "Food",
             "body": "Handle orders, payments, and fulfillment across in-store and online channels.",
-            "img": "baseer_health_and_beauty_274751d5b6.jpg",
+            "img": "baseer_food_76fc911f07.jpg",
             "link": true
           },
           {
             "title": "Health & Beauty",
             "body": "Manage appointments, sales, and customer relationships with ease.",
-            "img": "baseer_automotive_a17c88118f.jpg",
+            "img": "baseer_health_and_beauty_274751d5b6.jpg",
             "link": true
           },
           {
             "title": "Automotive",
             "body": "Track services, parts inventory, and billing from one platform.",
-            "img": "baseer_services_672f3abe5c.jpg",
+            "img": "baseer_automotive_a17c88118f.jpg",
             "link": true
           },
           {
             "title": "Services",
             "body": "Manage bookings, invoicing, and operations across web, mobile, and POS.",
-            "img": null,
+            "img": "baseer_services_672f3abe5c.jpg",
             "link": true
           }
         ]
