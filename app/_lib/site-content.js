@@ -5,7 +5,7 @@ export const siteContent = {
       "title": "Omnichannel Retail Platform to Run Your Entire Business",
       "lede": "Baseer is a cloud-based omnichannel platform connecting POS, ecommerce, mobile apps, warehouse, and ERP. Manage sales, inventory, orders, and customers in real time from one unified system.",
       "cta": "Request a Demo",
-      "img": null
+      "img": "baseer_omnichannel_pos_a2c9b4fd72.png"
     },
     "sections": [
       {
