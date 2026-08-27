@@ -27,14 +27,20 @@ export const siteContent = {
           "Warehouse Management",
           "ERP"
         ],
-        "tabIcons": [],
+        "tabIcons": [
+          "application_1_bd34ac9f34.webp",
+          "Group_742_8064db9ba2.webp",
+          "Group_b9f6acab37.webp",
+          "warehouse_1_8b81aaba63.webp",
+          "erp_5_a40b76bb70.webp"
+        ],
         "panelCount": 5,
         "panels": [
           {
             "kind": "features",
             "title": "Fast Omnichannel POS for Retail Businesses",
             "ledes": [],
-            "imgs": [],
+            "imgs": ["baseer_pos_9a6e39ff23.jpg"],
             "items": [
               {
                 "title": "Fast & Efficient Checkout",
@@ -84,7 +90,7 @@ export const siteContent = {
             "kind": "features",
             "title": "SEO-Ready Ecommerce Website for Online Sales",
             "ledes": [],
-            "imgs": [],
+            "imgs": ["baseer_ecommerce_c5f22a1bef.jpg"],
             "items": [
               {
                 "title": "Conversion‑Ready Storefronts",
@@ -134,7 +140,7 @@ export const siteContent = {
             "kind": "features",
             "title": "Branded Shopping App Connected to Your Store",
             "ledes": [],
-            "imgs": [],
+            "imgs": ["baseer_mobile_app_9458bca886.jpg"],
             "items": [
               {
                 "title": "Branded Shopping App",
@@ -184,7 +190,7 @@ export const siteContent = {
             "kind": "features",
             "title": "Multi-Warehouse Inventory Management",
             "ledes": [],
-            "imgs": [],
+            "imgs": ["warehouse_management_baseer_4d775f037d.jpg"],
             "items": [
               {
                 "title": "Barcode‑First Operations",
@@ -234,7 +240,7 @@ export const siteContent = {
             "kind": "features",
             "title": "Retail ERP Connected to Your Business Systems",
             "ledes": [],
-            "imgs": [],
+            "imgs": ["baseer_erp_043dcd31e7.jpg"],
             "items": [
               {
                 "title": "Connected Finance Hub",
@@ -380,7 +386,7 @@ export const siteContent = {
         ]
       },
       {
-        "kind": "split",
+        "kind": "features",
         "title": "One Platform, Every Channel",
         "ledes": [
           "Your customers shop in different ways Baseer connects every sales channel into one system so everything stays synchronized."

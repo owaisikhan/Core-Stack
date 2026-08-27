@@ -13,6 +13,12 @@ export function Header() {
   const [openMenu, setOpenMenu] = useState(null);
   const [drawer, setDrawer] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // Mobile drawer accordion state — the source prototype hardcoded every
+  // submenu as permanently "open" (a non-interactive stub), which doesn't
+  // match the real site's collapsed-by-default, click-to-expand drawer.
+  const [drawerTop, setDrawerTop] = useState(null);
+  const [drawerCategory, setDrawerCategory] = useState(null);
+  const [drawerIndustry, setDrawerIndustry] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -23,6 +29,14 @@ export function Header() {
   useEffect(() => {
     setDrawer(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!drawer) {
+      setDrawerTop(null);
+      setDrawerCategory(null);
+      setDrawerIndustry(null);
+    }
+  }, [drawer]);
 
   return (
     <header>
@@ -130,31 +144,39 @@ export function Header() {
         <div className="drawer_inner">
           <ul className="mobile_nav_bar">
             <li className="mobile_nav_list">
-              <div className="mobile_nav_link_wrapper">
+              <div className="mobile_nav_link_wrapper" onClick={() => setDrawerTop(drawerTop === "bt" ? null : "bt")}>
                 <span className="mobile_nav_link">Business Type</span>
                 <span className="mobile_drop_icon">
                   <SubArrow />
                 </span>
               </div>
-              <div className="mobile_submenu_collapse open" style={{ maxHeight: "none", opacity: 1 }}>
+              <div className={"mobile_submenu_collapse" + (drawerTop === "bt" ? " open" : "")}>
                 <ul className="mobile_categories_list">
                   {nav.businessTypes.map((c) => (
                     <li key={c.name} className="mobile_category_item">
-                      <div className="mobile_category_link_wrapper">
+                      <div
+                        className="mobile_category_link_wrapper"
+                        onClick={() => {
+                          setDrawerCategory(drawerCategory === c.name ? null : c.name);
+                          setDrawerIndustry(null);
+                        }}
+                      >
                         <span>{c.name}</span>
                         <SubArrow className="sub_arrow" />
                       </div>
-                      <div className="mobile_submenu_collapse_lvl2 open" style={{ maxHeight: "none", opacity: 1 }}>
+                      <div className={"mobile_submenu_collapse_lvl2" + (drawerCategory === c.name ? " open" : "")}>
                         <ul className="mobile_industries_list">
                           {c.industries.map((n) => (
                             <li key={n.name} className="mobile_industry_item">
-                              <div className="mobile_industry_link_wrapper">
+                              <div
+                                className="mobile_industry_link_wrapper"
+                                onClick={() => setDrawerIndustry(drawerIndustry === n.name ? null : n.name)}
+                              >
                                 <span>{n.name}</span>
                                 <SubArrow className="sub_arrow_lvl3" />
                               </div>
                               <div
-                                className="mobile_submenu_collapse_lvl3 open"
-                                style={{ maxHeight: "none", opacity: 1 }}
+                                className={"mobile_submenu_collapse_lvl3" + (drawerIndustry === n.name ? " open" : "")}
                               >
                                 <ul className="mobile_subchildren_list">
                                   {n.children.map((k) => (
@@ -174,10 +196,10 @@ export function Header() {
               </div>
             </li>
             <li className="mobile_nav_list">
-              <div className="mobile_nav_link_wrapper">
+              <div className="mobile_nav_link_wrapper" onClick={() => setDrawerTop(drawerTop === "sol" ? null : "sol")}>
                 <span className="mobile_nav_link">Solutions</span>
               </div>
-              <div className="mobile_submenu_collapse open" style={{ maxHeight: "none", opacity: 1 }}>
+              <div className={"mobile_submenu_collapse" + (drawerTop === "sol" ? " open" : "")}>
                 <ul className="mobile_standard_dropdown_list">
                   {nav.solutions.map((i) => (
                     <li key={i.href} className="mobile_standard_dropdown_item">
@@ -193,10 +215,10 @@ export function Header() {
               </Link>
             </li>
             <li className="mobile_nav_list">
-              <div className="mobile_nav_link_wrapper">
+              <div className="mobile_nav_link_wrapper" onClick={() => setDrawerTop(drawerTop === "res" ? null : "res")}>
                 <span className="mobile_nav_link">Resources</span>
               </div>
-              <div className="mobile_submenu_collapse open" style={{ maxHeight: "none", opacity: 1 }}>
+              <div className={"mobile_submenu_collapse" + (drawerTop === "res" ? " open" : "")}>
                 <ul className="mobile_standard_dropdown_list">
                   {nav.resources.map((i) => (
                     <li key={i.href} className="mobile_standard_dropdown_item">

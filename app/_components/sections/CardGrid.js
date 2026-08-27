@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SectionHead } from "@/app/_components/sections/SectionHead";
 import { SiteImage } from "@/app/_components/ui/SiteImage";
+import { ScrollRow } from "@/app/_components/ui/ScrollRow";
 
 const INDUSTRY_HREF = {
   Retail: "/industries/retail",
@@ -17,11 +18,11 @@ export function CardGrid({ s }) {
         <SectionHead title={s.title} text={s.ledes && s.ledes[0]} />
       </div>
       <div>
-        <div className="inner_sec_top typ_stories main_container">
+        <ScrollRow className="inner_sec_top typ_stories main_container">
           {(s.items || []).map((it, i) => (
             <div className="type_card" key={i}>
               <div className="image_block">
-                <SiteImage src={it.img} />
+                <SiteImage src={it.img} eager={i < 3} />
                 <ul className="typ_pt" />
               </div>
               <div className="type_cnt">
@@ -35,7 +36,7 @@ export function CardGrid({ s }) {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollRow>
       </div>
     </div>
   );

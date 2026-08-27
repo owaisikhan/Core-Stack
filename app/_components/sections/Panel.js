@@ -14,11 +14,11 @@ export function CardList({ items }) {
   );
 }
 
-export function Panel({ p }) {
+export function Panel({ p, eager }) {
   return (
     <>
       <div className="block image_block">
-        <SiteImage src={p.imgs && p.imgs[0]} />
+        <SiteImage src={p.imgs && p.imgs[0]} eager={eager} />
       </div>
       <div className="block">
         <h2 className="title">{p.title}</h2>

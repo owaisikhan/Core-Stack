@@ -26,7 +26,7 @@ export function TabStrip({ s }) {
           <div className="inner_sec_top">
             {panels.map((p, i) => (
               <div key={i} className={"pos_tab_dtl" + (i === t ? " active" : "")} style={{ display: i === t ? "flex" : "none" }}>
-                <Panel p={p} />
+                <Panel p={p} eager />
               </div>
             ))}
           </div>

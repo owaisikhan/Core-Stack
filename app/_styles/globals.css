@@ -126,6 +126,7 @@ button{font-family:inherit;cursor:pointer}
    pixel-perfect source of truth for every .primary_cta / .section_padding /
    .banner / etc. class used throughout the components below).
    ========================================================================== */
+header{background-color:#fff;position:fixed;left:0;top:0;width:100%;z-index:999;border-bottom:1px solid rgba(0,0,0,.1);font-family:"Wix Madefor Display",sans-serif}
 header .header .main_container{max-width:100%;margin:auto;padding-inline:30px;box-sizing:border-box}
 @media screen and (min-width:1800px){header .header .main_container{padding-inline:4%!important}}
 header .header .main_container .header_inner{display:flex;align-items:center;justify-content:space-between;height:94px;box-sizing:border-box;transition:box-shadow .3s ease}
